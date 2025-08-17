@@ -1,5 +1,6 @@
 ﻿using C44_G03_OOP03.Company;
-
+using C44_G03_OOP03.Inheritance;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace C44_G03_OOP03
 {
@@ -43,6 +44,13 @@ namespace C44_G03_OOP03
             //    Console.WriteLine(employee);
             #endregion
 
+            #region Part01 Num 5
+            //EBook eBook = new EBook("Mastering C#", "John Smith", "978-1-23456-789-0", 15.2);
+
+            //PrintedBook printedBook = new PrintedBook("Object-Oriented Programming Basics", "Jane Doe", "978-0-98765-432-1", 350);
+
+            //Console.WriteLine($"EBook Information: {eBook}\n \n PrintedBook Information: {printedBook} ");
+            #endregion
         }
     }
 }
