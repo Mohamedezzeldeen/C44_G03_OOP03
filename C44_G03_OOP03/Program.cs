@@ -83,6 +83,92 @@
 
     }
     #endregion
+
+    #region V04
+    internal class Parent
+    {
+
+        #region Properties
+
+        public int X { get; set; }
+        public int Y { get; set; }
+
+        #endregion
+
+        #region Constractor
+
+        public Parent(int x, int y)
+        {
+            X = x;
+            Y = y;
+        }
+
+        #endregion
+
+        #region Method
+        public virtual int Product()
+        {
+            return X * Y;
+        }
+
+        public override string ToString()
+        {
+            return $"X = {X} , Y = {Y}";
+        }
+
+        public virtual void MyFun()
+        {
+            Console.WriteLine("I'm Parent");
+        }
+        #endregion
+
+
+    }
+
+    //By Defult Constructor Of Child Make Constructor Chaning Parent Empty ParamterLess Constructor 
+    internal class Child : Parent
+    {
+        #region Property
+        public int Z { get; set; }
+        #endregion
+
+        #region Constractor
+        public Child(int x, int y, int z) : base(x, y)
+        {
+            Z = z;
+        }
+        #endregion
+
+        #region Method
+        public override string ToString()
+        {
+            return $"X = {X} , Y = {Y}, Z = {Z}";
+        }
+
+        public override int Product()
+        {
+            //return X * Y * Z;
+            // Or Better
+            return base.Product() * Z;
+        }
+
+        //public override void MyFun()
+        //{
+        //    Console.WriteLine("I'm Child");
+        //}
+
+        // Or
+
+        public new void MyFun()
+        {
+            Console.WriteLine("I'm Child");
+        }
+
+        #endregion
+
+
+    }
+    #endregion
     internal class Program
     {
         static void Main(string[] args)
@@ -103,6 +189,20 @@
             //Console.WriteLine(C01);
             //Console.WriteLine(C01.ToString()); 
             #endregion
+
+            #region V04
+            //Parent parent = new Parent(10,20);
+            //Console.WriteLine(parent);
+            //Console.WriteLine(parent.Product());
+            //parent.MyFun();
+
+            //Child child = new Child(10,20,30);
+
+            //Console.WriteLine(child);
+            //Console.WriteLine(child.Product());
+            //child.MyFun();
+            #endregion
+
         }
     }
 }
