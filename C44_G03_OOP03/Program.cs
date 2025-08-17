@@ -203,6 +203,20 @@
             //child.MyFun();
             #endregion
 
+            #region V05
+
+            #region Access Modifier 
+            //TypeA typeA = new TypeA();
+
+            //typeA.A = 1; // Not valid because it is private
+            //typeA.B = 1; // not valid because it is internal in the other projected
+            //typeA.C = 1; // public can be shown every where
+            //typeA.X = 1; // private protected without inheritence means private
+            //typeA.Y = 1; // protected without inheritance means private
+            //typeA.Z = 1; // protected internal without inheritence means internal can't be shown in the other project
+            #endregion
+
+            #endregion
         }
     }
 }
