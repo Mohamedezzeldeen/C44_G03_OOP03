@@ -93,6 +93,12 @@
             //1. Allocate 4 Bytes in stack [Null] 
             //C01 = new Car(10,"Audio",500);
 
+            #region V02
+
+            //C01 = new Car(10);
+            //C01 = new Car(10,"Fiat-128");
+
+            #endregion
 
             //Console.WriteLine(C01);
             //Console.WriteLine(C01.ToString()); 
